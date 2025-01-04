@@ -1,0 +1,60 @@
+@import "variaveis.less";
+@breakpointMobile: ~"(max-width: 767px)";
+@breakpointTablet: ~"(min-width: 1023px) and (max-width: 1023px) ";
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background-color: @corDeFundo;
+    color: @corDosTextos;
+}
+
+.container {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+
+    @media @breakpointMobile {
+        max-width: 70%;
+        background-color: red;
+    }
+
+    @media @@breakpointTablet {
+        max-width: 80%;
+        background-color: yellow;
+    }
+
+
+}
+
+header {
+    padding: 24px;
+
+    .profile-avatar{
+        display: block;
+        margin: 0 auto;
+        border-radius: 100%;
+    }
+}
+
+.profile-bio {
+    text-align: center;
+    &-name{
+        font-size: 16px;
+    }
+
+    &-subtitle{
+        font-size: 14px;
+    }
+
+    &-description{
+        font-size: 12px;
+        opacity: .7;
+    }
+}
